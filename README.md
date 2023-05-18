@@ -1,83 +1,44 @@
-Person Data Report Generator
+BMI Calculator
 
-This Java program collects information about individuals, calculates their Body Mass Index (BMI) and Basal Metabolic Rate (BMR), and generates a comprehensive report in both text and binary formats. The report includes individual data, the person with the highest BMI, and the average BMR for optimal males and females.
-Usage
+This is a Java program that calculates the Body Mass Index (BMI) of a person. BMI is a measure of body fat based on height and weight. It is calculated by dividing a person's weight in kilograms by their height in meters squared.
 
-    Clone the repository and navigate to the project directory.
-    Compile the Java source files using the following command:
+The program takes the following input from the user:
 
+    Name
+    Age
+    Weight
+    Height
+    Gender
 
+The program then calculates the user's BMI and displays it to the user. The program also displays the user's BMI category, which is based on the following guidelines:
 
-javac Main.java Person.java
+    Underweight: BMI < 18.5
+    Normal: BMI 18.5 - 24.9
+    Overweight: BMI 25 - 29.9
+    Obese: BMI 30 or greater
 
-    Run the compiled program:
+The program also calculates the user's basal metabolic rate (BMR), which is the number of calories a person burns at rest. The BMR is calculated using the following formulas:
 
+    Male: BMR = 66 + (13.7 * weight in kg) + (5 * height in cm) - (6.8 * age in years)
+    Female: BMR = 655 + (9.6 * weight in kg) + (1.8 * height in cm) - (4.7 * age in years)
 
+The program then displays the user's BMR to the user.
+How to use
 
-java Main
+To use the program, clone the repository and open the BMICalculator.java file in a Java IDE. Then, compile and run the program. The program will prompt you for the following information:
 
-    The program prompts you to enter the number of people for the report.
-    Provide the required information for each person:
-        Name
-        Age
-        Weight
-        Height
-        Gender (m or f)
-    After entering the information for all people, the program generates a report.
-    The generated report is saved in two formats:
-        Text format: A file named report.txt contains the report in human-readable form.
-        Binary format: A file named report.bin stores the report in binary format.
+    Name
+    Age
+    Weight
+    Height
+    Gender
 
-Program Workflow
+After you enter the information, the program will calculate your BMI and BMR and display them to you.
+Limitations
 
-The program consists of two classes:
+The BMI calculator is a simple program and does not take into account other factors that can affect a person's health, such as muscle mass and body fat percentage. Therefore, the results of the BMI calculator should not be used as a definitive measure of a person's health.
+Further development
 
-    Main: This class contains the main method and handles the user interface, data input, and report generation.
-    Person: This class represents an individual and contains methods to calculate BMI, BMR, and set various attributes. It also calculates the average BMR for optimal males and females.
+The BMI calculator could be further developed to take into account other factors that can affect a person's health, such as muscle mass and body fat percentage. This would allow the program to provide more accurate and personalized results.
 
-The program flow can be summarized as follows:
-
-    User is prompted to enter the number of people for the report.
-    Information about each person is collected, including their name, age, weight, height, and gender.
-    The program calculates the BMI and BMR for each person.
-    The person with the highest BMI is identified.
-    The collected data is written to both a text file (report.txt) and a binary file (report.bin).
-    The program generates a report displaying the collected data, the person with the highest BMI, and the average BMR for optimal males and females.
-
-Sample Report
-
-People data:
-
-    Person 1:
-        Name: John
-        Age: 30
-        Weight: 75.5 kg
-        Height: 180.0 cm
-        Gender: Male
-        BMI: 23.30
-        BMR: 1779.0
-        Status: Optimal
-    Person 2:
-        Name: Lisa
-        Age: 25
-        Weight: 62.0 kg
-        Height: 165.0 cm
-        Gender: Female
-        BMI: 22.81
-        BMR: 1354.7
-        Status: Optimal
-        ...
-        Highest BMI:
-    Name: David
-    Age: 28
-    Weight: 80.2 kg
-    Height: 175.0 cm
-    Gender: Male
-    BMI: 26.16
-    BMR: 1864.9
-    Status: Overweight
-
-Average BMR:
-
-    Average BMR for optimal males: 1687.6
-    Average BMR for optimal females: 1425.8
+The BMI calculator could also be developed to include a graphical user interface (GUI). This would make the program more user-friendly and accessible to a wider range of people.
